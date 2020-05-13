@@ -1,0 +1,133 @@
+*
+{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color:#fcce39;
+    color:whitesmoke;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    min-height: 100vh;
+}
+header{
+    font-size:30px;
+    color:black
+}
+header,form{
+    min-height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+form input,button
+{
+    padding:8px;
+    font-size:18px;
+    border: none;
+    background-color: whitesmoke;
+    outline: none;
+}
+form button{
+    color:#d88771;
+    background:whitesmoke;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+form button:hover
+{
+    background:#d88771;
+    color:whitesmoke
+}
+.todo-container
+{
+     display:flex;
+     justify-content: center;
+     align-items: center;
+}
+.todo-list
+{
+    min-width:30%;
+    list-style: none;
+}
+.todo
+{
+    margin: 0.5rem;
+    background:whitesmoke;
+    color:black;
+    font-size:18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.5s ease;
+}
+.todo li
+{
+   flex:1; 
+}
+.delete-btn,.complete-btn
+{
+    background:#ff6747;
+    color: whitesmoke;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size:15px;
+}
+.complete-btn{
+    background-color: rgb(84, 209, 84);
+}
+.todo-item
+{
+    padding:0 5px
+}
+.fa-trash,.fa-check
+{
+    pointer-events:none;
+}
+.completed
+{
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+.fall
+{
+    transform: translate(8rem) rotate3d(60deg);
+    opacity: 0;
+}
+select 
+{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline:none;
+    border:none;
+}
+.select
+{
+    margin:1rem;
+    position: relative;
+    overflow: hidden;
+}
+select{
+    color:black;
+    width:10rem;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.select::after
+{
+    content: "\25BC";
+    position: absolute;
+    background: #ff6747;
+    top: 0;
+    right:0;
+    padding:8px;
+    pointer-events: none;
+    transition: all .4s ease;
+}
+.select:hover::after{
+    background: rgb(231, 147, 51);
+    color:whitesmoke;
+}
